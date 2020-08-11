@@ -1,17 +1,14 @@
 # Health Management System
 """This health management system keeps a record for your daily diet and exercise
+    It creates a text file with time stamp on every activity
     Log is to add your activity
-    It creates an text file with time stamp when you added yor activity
     Retrive is to see the activity"""
+import time
 
 client_list = {1: "Tejas", 2: "Harry", 3: "Anand"}
 log_list = {1: "Exercise", 2: "Diet"}
 
-
-def getdate():
-    import datetime
-    return datetime.datetime.now()
-
+localtime = time.asctime(time.localtime(time.time()))
 
 try:
     print("Select Client Name:")
@@ -35,7 +32,7 @@ try:
         while (k is not "n"):
             print("Enter", log_list[log_name], "\n", end="")
             mytext = input()
-            f.write("[ " + str(getdate()).replace(":", "-") + " ] : " + mytext + "\n")
+            f.write("[ " + localtime + " ] : " + mytext + "\n")
             k = input("ADD MORE ? y/n:")
             continue
         f.close()
