@@ -4,7 +4,7 @@ def findBinod(filename):
     """"Detects Binod Hidden in files"""
     with open(filename, "r") as f:
         fileContent = f.read()
-    # Finds binod by converting striong to lowercase
+    # Finds binod by converting string to lowercase
     if "binod" in fileContent.lower():
         return True
     else:
