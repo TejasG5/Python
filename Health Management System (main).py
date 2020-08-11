@@ -1,6 +1,7 @@
 # Health Management System
 """This health management system keeps a record for your daily diet and exercise
     Log is to add your activity
+    It creates an text file with time stamp when you added yor activity
     Retrive is to see the activity"""
 
 client_list = {1: "Tejas", 2: "Harry", 3: "Anand"}
